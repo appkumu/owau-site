@@ -263,9 +263,12 @@
   </footer>
 
   <script>
-    /* ===== SETUP: paste your email tool's form URL here (see README) ===== */
-    var WAITLIST_ENDPOINT = "https://app.kit.com/forms/YOUR_FORM_ID/subscriptions";
-    /* =================================================================== */
+    /* ===== Waitlist: saves emails to the Owau Supabase project (see README) =====
+       The publishable/anon key is public by design; the database only lets it
+       call join_waitlist(), which can add an email but never read the list. */
+    var SUPABASE_URL = "https://efidvkbdbdddfldkjois.supabase.co";
+    var SUPABASE_KEY = "sb_publishable_DnZ3zNCHPpeyNI-XVkuLxA_O_zyg1ke";
+    /* ========================================================================== */
 
     document.getElementById("yr").textContent = new Date().getFullYear();
 
@@ -303,7 +306,7 @@
           email.focus();
           return;
         }
-        if (WAITLIST_ENDPOINT.indexOf("YOUR_FORM_ID") !== -1) {
+        if (SUPABASE_KEY.indexOf("PASTE_") === 0) {
           msg.textContent = "Waitlist form isn't connected yet.";
           msg.classList.add("err");
           return;
@@ -311,14 +314,17 @@
 
         btn.disabled = true;
         btn.textContent = "Joining…";
-        var data = new FormData();
-        data.append("email_address", email.value.trim());
-        data.append("email", email.value.trim());
-
-        fetch(WAITLIST_ENDPOINT, { method: "POST", body: data, mode: "no-cors" })
-          .then(function () {
+        fetch(SUPABASE_URL + "/rest/v1/rpc/join_waitlist", {
+          method: "POST",
+          headers: SUPABASE_KEY.indexOf("eyJ") === 0
+            ? { "Content-Type": "application/json", "apikey": SUPABASE_KEY, "Authorization": "Bearer " + SUPABASE_KEY }
+            : { "Content-Type": "application/json", "apikey": SUPABASE_KEY },
+          body: JSON.stringify({ p_email: email.value.trim(), p_source: "website" })
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
             form.style.display = "none";
-            msg.textContent = "You're on the list. Check your inbox to confirm.";
+            msg.textContent = "You're on the list! We'll email you on launch day.";
             msg.classList.add("ok");
           })
           .catch(function () {
