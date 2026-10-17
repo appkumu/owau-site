@@ -11,64 +11,185 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+
+.page .summary { background: #fff; border: 1px solid #ece6e1; border-left: 4px solid var(--mint); border-radius: 14px; padding: 16px 22px; margin: 20px 0; }
+.page .summary p { margin: 0 0 6px; }
+.page .toc { background: #fff; border: 1px solid #ece6e1; border-radius: 14px; padding: 16px 22px; margin: 20px 0 10px; }
+.page .toc p { margin: 0 0 6px; }
+.page .toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 28px; }
+.page .table-wrap { overflow-x: auto; margin: 16px 0; }
+.page table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; font-size: 0.95rem; }
+.page th, .page td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid #ece6e1; color: #4d4646; }
+.page th { background: #efe9e4; color: var(--ink); }
+.page td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+@media (max-width: 520px) { .page .toc ol { columns: 1; } .page td:first-child { white-space: normal; } }
+  </style>
 </head>
 <body>
   <div class="topbar"><div class="wrap"><nav class="nav"><a class="logo" href="/">owau</a><a class="small" href="/#join">Join the waitlist</a></nav></div></div>
 
   <main class="page">
     <div class="wrap">
-      <!--
-        DRAFT TEMPLATE. Review every [bracketed] item and confirm it matches how the app
-        actually handles data before launch. This is not legal advice; have a lawyer
-        review it if you can. Your App Store privacy "nutrition label" must match this page.
-      -->
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: [Month Day, 2026]</p>
+      <p class="updated">Effective October 13, 2026 · Last updated October 16, 2026 · App Kumu LLC</p>
 
-      <p>This policy explains how App Kumu LLC ("we", "us") collects, uses and protects information when you use the Owau app and owauapp.com (together, "Owau").</p>
+      <div class="summary">
+        <p><strong>The short version</strong></p>
+        <ul>
+          <li>Owau is a personal app. What you make in it (affirmations, recordings, journal, moods, photos) is private to your account.</li>
+          <li>We don't sell your data, show ads or track you across other apps and websites.</li>
+          <li>We use a few service providers to run Owau (listed below), only for that purpose.</li>
+          <li>You can download a copy of your data or delete your account, and everything in it, from Settings at any time.</li>
+        </ul>
+      </div>
 
-      <h2>Information we collect</h2>
+      <nav aria-label="Contents" class="toc">
+        <p><strong>Contents</strong></p>
+        <ol>
+          <li><a href="#who">Who we are</a></li>
+          <li><a href="#collect">What we collect</a></li>
+          <li><a href="#device">What stays on your phone</a></li>
+          <li><a href="#use">How we use it</a></li>
+          <li><a href="#providers">Service providers</a></li>
+          <li><a href="#voice">AI voice</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#purchases">Purchases</a></li>
+          <li><a href="#third">Outside content</a></li>
+          <li><a href="#website">This website and the waitlist</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#retention">Keeping and deleting data</a></li>
+          <li><a href="#rights">Your choices and rights</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#international">Where data is stored</a></li>
+          <li><a href="#changes">Changes</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="who">1. Who we are</h2>
+      <p>Owau is made by App Kumu LLC, a company in Hawai&#699;i ("we", "us"). This policy covers the Owau app for iPhone and its widgets, and this website (owauapp.com). If you have questions, see <a href="#contact">Contact us</a>.</p>
+
+      <h2 id="collect">2. What we collect</h2>
+      <p>We collect only what you give us and what the app needs to work. When you create an account, the information below is stored with your account so you can use it on another phone and get it back if you lose yours.</p>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>What</th><th>Examples</th></tr></thead>
+        <tbody>
+          <tr><td>Account details</td><td>Your email address, your name, and a username you choose. If you use Sign in with Apple, Apple may give us a private relay email instead of your real one.</td></tr>
+          <tr><td>Profile details you choose to give</td><td>Birthday (for your birth chart), gender, and spiritual or religious preferences from onboarding.</td></tr>
+          <tr><td>Things you create</td><td>Affirmations, scripts, journal entries, letters to your future self, wins, wishes, habits, calendar events, vision board items, Tracks, saved lessons, and practice history such as rituals, breathing sessions and card draws.</td></tr>
+          <tr><td>Game progress and settings</td><td>Your Wealth Game history and balance (play money only), and your in-app settings such as streaks, badges you've seen and the content you prefer.</td></tr>
+          <tr><td>Mood check-ins</td><td>The moods you log.</td></tr>
+          <tr><td>Voice recordings</td><td>Affirmations you record in your own voice.</td></tr>
+          <tr><td>Photos</td><td>Photos you add to your vision board or wins. We remove location details from photos before saving them.</td></tr>
+          <tr><td>AI voice (optional)</td><td>Voice samples and a spoken consent clip with its transcript. See <a href="#voice">AI voice</a>.</td></tr>
+          <tr><td>Community (optional)</td><td>Your posts, comments, groups, reports and blocks. See <a href="#community">Community</a>.</td></tr>
+          <tr><td>Purchases</td><td>Your Owau Plus plan and Apple's transaction ID for it. See <a href="#purchases">Purchases</a>.</td></tr>
+          <tr><td>Device token</td><td>A token from Apple that lets us send you push notifications, if you allow them.</td></tr>
+          <tr><td>Technical records</td><td>Like most online services, our hosting provider keeps short-lived server logs of requests (such as time, IP address and which part of the service was used) to keep it running and secure.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Mood check-ins and spiritual or religious preferences can be sensitive. You choose whether to give them, and we use them only to show them back to you and tailor your content.</p>
+      <p>We do not collect your location, contacts, browsing history or payment card details, and we don't use advertising or tracking tools.</p>
+
+      <h2 id="device">3. What stays on your phone</h2>
       <ul>
-        <li><strong>Account information:</strong> your name, email address and login details when you create an account.</li>
-        <li><strong>Voice recordings:</strong> recordings you choose to make so Owau can create affirmations in your voice.</li>
-        <li><strong>Your manifesting content:</strong> goals, affirmations, rituals, calendar entries, reminders, wins and onboarding answers (such as what you're manifesting).</li>
-        <li><strong>Community content:</strong> posts, comments and group activity you share with other users.</li>
-        <li><strong>Usage and device data:</strong> app interactions, crash reports, device type and OS version, collected through [analytics/crash tools, e.g. Firebase, TelemetryDeck, or none].</li>
-        <li><strong>Waitlist:</strong> if you join the waitlist on our website, your email address, stored with [email provider, e.g. Kit].</li>
+        <li><strong>Camera.</strong> Mirror Mode is a live view only: nothing is recorded or saved. Photos are only kept if you choose to save them.</li>
+        <li><strong>Photo library.</strong> Owau only sees the photos you pick.</li>
+        <li><strong>Magic 8 Ball.</strong> When you ask a question by voice, Apple's speech recognition turns it into text, which may be processed by Apple under <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>. Owau doesn't store your question.</li>
+        <li><strong>Personal Voice.</strong> If you let Owau use your iPhone's Personal Voice, it stays on your device. We never receive it.</li>
+        <li><strong>Widgets.</strong> Widgets show an affirmation and your progress. They hide numbers while your phone is locked.</li>
       </ul>
 
-      <h2>How we use it</h2>
+      <h2 id="use">4. How we use it</h2>
       <ul>
-        <li>To run Owau and its features, including creating audio affirmations from your recordings.</li>
-        <li>To send reminders and notifications you turn on.</li>
-        <li>To email you about launch and product updates if you joined the waitlist (you can unsubscribe anytime).</li>
-        <li>To fix bugs, keep Owau secure and improve the app.</li>
+        <li>To run the app: save and sync what you create, play your recordings, and show your progress.</li>
+        <li>To send notifications you've turned on, such as reminders and special dates.</li>
+        <li>To provide Owau Plus and AI voice, and check your subscription is active.</li>
+        <li>To run the community safely: show posts to the right people, act on reports, and stop spam and scams.</li>
+        <li>To keep Owau secure and stop abuse, for example by limiting how often some actions can be tried.</li>
+        <li>To answer you when you contact us.</li>
       </ul>
-      <p>We do not sell your personal information, and we do not use your voice recordings to advertise to you.</p>
+      <p>We don't sell your personal information, share it for advertising, or use it to build profiles for anyone else. We don't use your content to train AI models.</p>
 
-      <h2>Voice recordings</h2>
-      <p>Your recordings are used only to create and play back your affirmations. [Describe where recordings are stored, e.g. on your device only / in our cloud storage with provider X, and whether any third-party AI or speech service processes them.] You can delete your recordings at any time in the app, and they are deleted when you delete your account.</p>
+      <h2 id="providers">5. Service providers</h2>
+      <p>We use a small number of companies to run Owau. They process data only to provide their service to us, under their own security and privacy terms.</p>
+      <ul>
+        <li><strong>Supabase</strong> hosts our database, file storage and server code, in the United States (Amazon Web Services, Oregon). It stores your account and the data listed above.</li>
+        <li><strong>Apple</strong> handles Sign in with Apple, App Store purchases and push notifications.</li>
+        <li><strong>ElevenLabs</strong> creates spoken audio in your AI voice, if you use AI voice. See <a href="#voice">AI voice</a>.</li>
+        <li><strong>Pexels</strong> provides photos when you search for vision board images. Your search words are sent to Pexels; we don't store them.</li>
+      </ul>
+      <p>We may also share information if the law requires it, to protect someone's safety, or as part of a sale or merger of our business (in which case this policy would continue to apply to your data).</p>
 
-      <h2>Sharing</h2>
-      <p>We share information only with service providers who help us run Owau, such as [hosting, database, email, analytics, AI/voice providers], under agreements that limit their use of it. Content you post in community groups is visible to other members of those groups. We may disclose information if required by law.</p>
+      <h2 id="voice">6. AI voice</h2>
+      <p>AI voice is optional, and part of Owau Plus. It lets Owau speak your affirmations in a voice made from your own.</p>
+      <ul>
+        <li><strong>Your consent.</strong> To set it up, you read a sentence we show you, in your own voice. That confirms you agree to your voice being used this way. We send that clip to ElevenLabs to turn it into text, and keep the text and the date as a record of your consent.</li>
+        <li><strong>How it works.</strong> Your voice samples are stored privately in your account. When you ask for lines to be spoken, the samples are sent to ElevenLabs to make a temporary voice, which is deleted as soon as your lines are made.</li>
+        <li><strong>Only your voice.</strong> Please only use your own voice. Making a voice of someone else is not allowed.</li>
+        <li><strong>Deleting it.</strong> You can delete your AI voice at any time in the app. This removes your samples and consent record from our servers and any voice left at ElevenLabs. Deleting your account does the same.</li>
+      </ul>
+      <p>Voice recordings can count as biometric information under some laws. We use them only to create audio for you, never to identify you, and we don't sell or share them beyond what is described here.</p>
 
-      <h2>Data retention and deletion</h2>
-      <p>We keep your information while your account is active. You can delete your account from within the app at [Settings &rarr; Account &rarr; Delete account], which deletes your account and associated data within [30] days, except where we must keep it for legal reasons.</p>
+      <h2 id="community">7. Community</h2>
+      <p>The community is optional. Before you join, you agree to our community guidelines.</p>
+      <ul>
+        <li><strong>What others see.</strong> Other members see your username, not your name or email. Posts and comments in a private group are seen by its members. Posts in a public group can be seen by any Owau member.</li>
+        <li><strong>Reports and blocks.</strong> Reports are private: the person you report isn't told who reported them. We review reports and may remove content or accounts that break the guidelines. Content reported by several people may be hidden automatically while it's reviewed. When you block someone, you stop seeing each other's posts.</li>
+        <li><strong>Scam warnings.</strong> Posts with links, phone numbers or money requests show a warning, and links warn you before leaving the app. Owau staff will never ask you for money, codes or passwords.</li>
+      </ul>
 
-      <h2>Children</h2>
-      <p>Owau is not directed to children under 13, and we do not knowingly collect their information. If you believe a child has given us information, contact us and we will delete it.</p>
+      <h2 id="purchases">8. Purchases</h2>
+      <p>Owau Plus is sold through the App Store. Apple handles payment; we never see your card details. If you subscribe, we store which plan you have, when it renews or ends, and Apple's transaction ID for it, linked to your account. We use this only to check with Apple that your subscription is active before giving you features that cost us money to run, such as AI voice. You can manage or cancel your subscription in your Apple Account settings.</p>
 
-      <h2>Your choices and rights</h2>
-      <p>You can access, update or delete your information in the app or by contacting us. Depending on where you live, you may have additional rights, such as requesting a copy of your data.</p>
+      <h2 id="third">9. Outside content</h2>
+      <p>Some parts of Owau show content from other services. When you use them, that service receives a request from your phone (which includes your IP address) and may collect information under its own privacy policy:</p>
+      <ul>
+        <li><strong>YouTube</strong>, for creator and lesson videos (<a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>).</li>
+        <li><strong>Every.org</strong>, for searching and giving to charities (<a href="https://www.every.org/privacy" rel="noopener">Every.org Privacy Policy</a>).</li>
+        <li>A sample product catalog used in the Wealth Game shop. The Wealth Game uses play money only; no real money or payment details are involved.</li>
+      </ul>
+      <p>Links that people post in the community lead to other websites. We're not responsible for their content or privacy practices.</p>
 
-      <h2>Security</h2>
-      <p>We use reasonable safeguards to protect your information, but no system is completely secure.</p>
+      <h2 id="website">10. This website and the waitlist</h2>
+      <p>owauapp.com is hosted by GitHub Pages, which keeps short-lived technical logs (such as IP addresses) to run and secure the site. The site loads fonts from Google Fonts. We don't use cookies, ads or analytics on this website.</p>
+      <p>If you join the waitlist, we store your email address with our email provider, Kit, and use it only to tell you about Owau's launch and updates. Every email has an unsubscribe link, and you can ask us to remove your email at any time.</p>
 
-      <h2>Changes</h2>
-      <p>If we change this policy, we'll update the date above and, for significant changes, let you know in the app or by email.</p>
+      <h2 id="security">11. Security</h2>
+      <p>Your data is private to your account: our database and file storage only let you reach your own data, and we test this automatically. Data is encrypted in transit and at rest. On your phone, your sign-in is kept in the iPhone Keychain on that device only, and voice recordings are left out of device backups. Signing out removes your Owau data from the phone after backing it up to your account.</p>
+      <p>No system is perfectly secure, but if we learn of a breach that affects your personal information, we'll tell you as the law requires.</p>
+      <p>To report a security problem, email <a href="mailto:owauapp.security@gmail.com">owauapp.security@gmail.com</a>.</p>
 
-      <h2>Contact</h2>
-      <p>App Kumu LLC<br>[Mailing address]<br><a href="mailto:support@owauapp.com">support@owauapp.com</a></p>
+      <h2 id="retention">12. Keeping and deleting data</h2>
+      <p>We keep your data while you have an account, so it's there when you come back. Server logs are kept for a short time (days, not months).</p>
+      <p><strong>Deleting your account</strong> (Settings &rarr; Account &rarr; Delete Account) removes your account and everything linked to it from our servers: your profile, everything you created, your recordings and photos, your posts and comments, your AI voice (including any voice left at ElevenLabs), and your link to Sign in with Apple. It also removes Owau data from that phone. Groups you own are handed to another member, or deleted if there's no one else. Deletion can't be undone, so export your data first if you want a copy.</p>
+      <p>Backups made by our hosting provider may hold deleted data for a short time until they expire.</p>
+
+      <h2 id="rights">13. Your choices and rights</h2>
+      <ul>
+        <li><strong>Get a copy</strong> of your data: Settings &rarr; Account &rarr; Export My Data.</li>
+        <li><strong>Correct</strong> your details in the app, or ask us to.</li>
+        <li><strong>Delete</strong> your account and data: Settings &rarr; Account &rarr; Delete Account.</li>
+        <li><strong>Turn things off:</strong> notifications, camera, microphone and photo access can be changed in your iPhone's Settings at any time.</li>
+        <li><strong>Leave things out:</strong> the profile details, community and AI voice are optional.</li>
+      </ul>
+      <p>Depending on where you live (for example California, or the EU and UK), you may have further rights, such as to object to or limit how we use your data, or to complain to a data protection authority. Email us and we'll respond within the time the law requires. We won't treat you differently for using your rights.</p>
+      <p>If you're in the EU or UK, we use your information to provide the service you asked for (contract), with your consent where we ask for it (such as AI voice and sensitive profile details, which you can withdraw at any time), and for our legitimate interests in keeping Owau safe and secure.</p>
+
+      <h2 id="children">14. Children</h2>
+      <p>Owau is not meant for children under 13, and we don't knowingly collect personal information from them. If you believe a child under 13 has given us information, email us and we'll delete it.</p>
+
+      <h2 id="international">15. Where data is stored</h2>
+      <p>Owau's servers are in the United States. If you use Owau from another country, your information is transferred to and stored in the United States, where data protection laws may differ from yours.</p>
+
+      <h2 id="changes">16. Changes</h2>
+      <p>If we change this policy, we'll update the date at the top. If a change is significant, we'll tell you in the app before it takes effect.</p>
+
+      <h2 id="contact">17. Contact us</h2>
+      <p>App Kumu LLC<br>41-859 Kalanianaole, PO Box 1050<br>Waimanalo, HI 96795, United States<br>Email: <a href="mailto:owauapp.security@gmail.com">owauapp.security@gmail.com</a></p>
     </div>
   </main>
 
